@@ -16,7 +16,7 @@ jobs:
 
           ISSUE_KEY=$(printf '%s\n%s' "$TITLE" "$BODY" | grep -oE '[A-Z][A-Z0-9]+-[0-9]+' | head -n1)
           if [ -z "$ISSUE_KEY" ]; then
-            echo "No ISSUE_KEY found in PR title/body"; exit 0
+            echo "No ISSUE_KEY found in PR title/body!"; exit 0
           fi
           echo "ISSUE_KEY=$ISSUE_KEY" >> $GITHUB_ENV
           echo "ISSUE_KEY=$ISSUE_KEY"
