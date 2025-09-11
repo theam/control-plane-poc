@@ -9,7 +9,7 @@
           {
             "id": "gpt-4o-mini",
             "name": "GPT-4o mini",
-            "default_max_tokens": 10000
+            "default_max_tokens": 1000
           }
         ]
       }
