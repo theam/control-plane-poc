@@ -1,4 +1,4 @@
-name: test-crush
+name: crush-test
 
 on:
   workflow_dispatch:
