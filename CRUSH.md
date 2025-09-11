@@ -13,3 +13,4 @@ Constraints:
 - Non-interactive CI. Do not use any network calls other than `git` and `gh`.
 - If the branch already exists, append a numeric suffix (`-2`, `-3`, ...).
 - Never modify files matched by `.crushignore` or `.gitignore`.
+- Never commit node_modules and other unnecessary depepency related folders.
