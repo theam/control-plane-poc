@@ -7,6 +7,14 @@ A minimal proof-of-concept repository.
 - Create a new branch for any change: `git switch -c <your-branch>`.
 - Keep pull requests small and focused.
 
+## Node server
+- Requires Node 18+ (tested with Node 20; see .nvmrc)
+- Start the server: `node server.js`
+- Configure port via env var: `PORT=8080 node server.js`
+- Healthcheck endpoints:
+  - GET /health -> `{ "status": "ok" }`
+  - GET / -> `{ "status": "ok" }`
+
 ## Conventions
 - Write clear commit messages focused on the why.
 - Keep files and functions short and single-purpose.
