@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Control Plane — Landing Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Control Plane</div>
+      <nav class="nav">
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-secondary" href="#docs">Read the docs</a>
+        <a class="btn btn-primary" href="#cta">Get early access</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">☰</button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" hidden>
+      <a href="#product">Product</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-secondary" href="#docs">Read the docs</a>
+      <a class="btn btn-primary" href="#cta">Get early access</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Control your infra, ship with confidence</h1>
+          <p class="subhead">A centralized control plane to orchestrate services, environments, and deployments — with guardrails built in.</p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#cta">Get early access</a>
+            <a class="btn btn-tertiary" href="#docs">Read the docs</a>
+          </div>
+          <div class="social-proof" aria-label="Trusted by">
+            <div class="logos">
+              <span>Acme</span>
+              <span>Globex</span>
+              <span>Initech</span>
+              <span>Umbrella</span>
+              <span>Hooli</span>
+            </div>
+            <blockquote>“We shipped 3x faster and cut incidents in half.” — <cite>Staff Platform Engineer</cite></blockquote>
+          </div>
+        </div>
+        <div class="hero-visual" role="img" aria-label="Control plane topology mockup">
+          <img src="imagery/hero/placeholder-hero.webp" alt="Abstract systems topology" />
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>The problem</h2>
+          <ul>
+            <li>Teams wrestle with fragmented tooling, snowflake environments, and brittle release processes.</li>
+            <li>Compliance and operational risk slow delivery.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>The solution</h2>
+          <p>A programmable control plane to define, standardize, and automate operational workflows end-to-end.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="section alt">
+      <div class="container">
+        <h2>Key benefits</h2>
+        <div class="card-grid">
+          <article class="card"><h3>Consistency</h3><p>Golden paths for services, environments, and pipelines</p></article>
+          <article class="card"><h3>Velocity</h3><p>Self-serve operations with policy-guarded workflows</p></article>
+          <article class="card"><h3>Reliability</h3><p>Progressive delivery, automated rollbacks, health gates</p></article>
+          <article class="card"><h3>Compliance</h3><p>Policy as code, attestation, and audit trails</p></article>
+        </div>
+
+        <h2>Product highlights</h2>
+        <ul class="bullets">
+          <li>Service blueprints and environment templates</li>
+          <li>Change management with approvals and policy checks</li>
+          <li>Deployment orchestration with canary/blue-green strategies</li>
+          <li>Runtime insights and fleet-level status</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Model:</strong> Define services, environments, policies</li>
+          <li><strong>Orchestrate:</strong> Provision infra, promote releases, gate by health</li>
+          <li><strong>Observe:</strong> Track changes, surface risk, enforce guardrails</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="section alt">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>What is a control plane?</summary>
+          <p>A centralized system to model, orchestrate, and observe operations across environments and services.</p>
+        </details>
+        <details>
+          <summary>How do you integrate?</summary>
+          <p>GitHub, Kubernetes, CI/CD, cloud providers. Open APIs and Terraform provider planned.</p>
+        </details>
+        <details>
+          <summary>Is it secure?</summary>
+          <p>SSO, least-privilege, audit logs, and secretless integrations.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta">
+      <div class="container">
+        <h2>Get early access</h2>
+        <form class="cta-form" aria-label="Join the waitlist">
+          <label>
+            <span class="visually-hidden">Email</span>
+            <input type="email" name="email" placeholder="name@company.com" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Join the waitlist</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© Control Plane</span>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    if (btn && mobile) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if (mobile.hasAttribute('hidden')) mobile.removeAttribute('hidden');
+        mobile.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
