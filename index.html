@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CTP POC — Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/logo.svg" alt="Company Logo" class="logo" />
+        <span class="brand-name" data-cms="site_name">Control Plane POC</span>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 data-cms="hero_title">Build, ship, and scale with confidence</h1>
+          <p class="sub" data-cms="hero_subtitle">A minimal control plane proof-of-concept showcasing integration and automation.</p>
+          <div class="cta">
+            <a class="btn primary" href="#form">Get early access</a>
+            <a class="btn ghost" href="#features">Learn more</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="/hero.png" alt="Product preview" />
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2 data-cms="features_heading">Why teams choose us</h2>
+        <div class="grid">
+          <article class="card">
+            <h3 data-cms="feature_1_title">Simple</h3>
+            <p data-cms="feature_1_body">Straightforward workflows to get you productive fast.</p>
+          </article>
+          <article class="card">
+            <h3 data-cms="feature_2_title">Composable</h3>
+            <p data-cms="feature_2_body">Integrate your tools and data sources effortlessly.</p>
+          </article>
+          <article class="card">
+            <h3 data-cms="feature_3_title">Scalable</h3>
+            <p data-cms="feature_3_body">Built with growth and reliability in mind.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="stack">
+          <h2 data-cms="about_heading">Built for developers</h2>
+          <p data-cms="about_body">This POC demonstrates a modern, responsive landing with CMS field hooks and a working form, suitable for static hosting or integration into a broader app.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="signup">
+      <div class="container">
+        <h2 data-cms="form_heading">Request early access</h2>
+        <form id="lead-form" class="lead-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            <span class="error" data-error-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="[email protected]" required />
+            <span class="error" data-error-for="email"></span>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" placeholder="Acme Inc." />
+            <span class="error" data-error-for="company"></span>
+          </div>
+          <button class="btn primary" type="submit">Submit</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span data-cms="site_name">Control Plane POC</span></span>
+      <a href="#" class="policy" data-cms="policy_link_text">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
