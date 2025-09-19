@@ -1,15 +1,13 @@
-# Landing Page Design — CTPPOC-69
+# Landing Page — Frontend Implementation (CTPPOC-80)
 
-This folder contains the final copy, imagery plan, and style guide for the landing page.
+This directory contains a minimal static frontend to list environments and trigger actions against a backend API.
 
-## Contents
-- copy.md — finalized marketing copy and structure
-- style-guide.md — typography, color palette, spacing, and components
-- imagery/
-  - hero/ — guidance and placeholders for hero imagery
-  - illustrations/ — iconography and supporting visuals
+- index.html — basic layout and components following the style guide
+- styles.css — tokens and components (buttons, cards, sections)
+- main.js — data fetching from API and UI wiring
 
-## Usage
-- Product/Marketing can review copy.md for final wording.
-- Frontend can implement styles from style-guide.md.
-- Designers can replace placeholders in imagery/ with final exported assets.
+API
+- GET /api/environments -> [{ id, name, description }]
+- POST /api/environments/:id/actions { action: "deploy" | "promote" | "rollback" }
+
+Configure API base by exposing window.env.API_BASE before main.js loads if not using /api.

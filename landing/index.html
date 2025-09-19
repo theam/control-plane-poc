@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Control Plane — Environments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Control your infra, ship with confidence</h1>
+      <p class="subhead">A centralized control plane to orchestrate services, environments, and deployments — with guardrails built in.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#environments">View environments</a>
+        <a class="btn btn-secondary" href="#docs">Read the docs</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="environments" class="card">
+      <header class="section-header">
+        <h2>Environments</h2>
+        <div class="actions">
+          <button id="refresh" class="btn btn-secondary">Refresh</button>
+        </div>
+      </header>
+      <div id="env-list" class="env-list" role="region" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <template id="env-item-tpl">
+    <div class="env-item">
+      <div class="env-meta">
+        <div class="env-name"></div>
+        <div class="env-desc text-secondary"></div>
+      </div>
+      <div class="env-actions">
+        <button class="btn btn-small" data-action="deploy">Deploy</button>
+        <button class="btn btn-small btn-outline" data-action="promote">Promote</button>
+        <button class="btn btn-small btn-danger" data-action="rollback">Rollback</button>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
